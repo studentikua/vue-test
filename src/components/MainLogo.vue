@@ -9,7 +9,7 @@
 <script>
 
 export default {
-  name: "Logo",
+  name: "MainLogo",
   props: {},
 
   components: {},

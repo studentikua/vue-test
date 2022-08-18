@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MainTitle title="FULL-CYCLE EVENT AGENCY"/>
+
+    <TextMarquee msg="FULL-CYCLE EVENT AGENCY FULL-CYCLE EVENT AGENCY"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import MainTitle from '@/components/MainTitle'
+import TextMarquee from '@/components/TextMarquee'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    MainTitle,
+    TextMarquee,
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .home {
+    background-color: #e5e5e5;
+  }
+</style>
