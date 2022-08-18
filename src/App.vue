@@ -1,4 +1,5 @@
 <template>
+  <LocalesInfo/>
   <MainLogo/>
   <NavMenu/>
   <router-view/>
@@ -7,11 +8,13 @@
 <script>
 import NavMenu from '@/components/NavMenu.vue'
 import MainLogo from '@/components/MainLogo.vue'
+import LocalesInfo from './components/LocalesInfo.vue';
 
 export default {
   components: {
     NavMenu,
-    MainLogo
+    MainLogo,
+    LocalesInfo
 }
 }
 </script>
@@ -40,6 +43,6 @@ html, body {
   overflow: hidden;
   position: relative;
   height: 100%;
-  background-color: #e5e5e5;
+  background-color: #BEBEBE;
 }
 </style>

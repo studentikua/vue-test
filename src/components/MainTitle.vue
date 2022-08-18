@@ -22,8 +22,8 @@ export default {
     parallax(e) {
       document.querySelectorAll(".title__move").forEach((layer) => {
         const speed = .5;
-        const x = (window.innerWidth - e.pageX * speed) / 90;
-        const y = (window.innerHeight - e.pageY * speed) / 90;
+        const x = (window.innerWidth - e.pageX * speed) / 50;
+        const y = (window.innerHeight - e.pageY * speed) / 50;
 
         layer.style.transform = `translateX(-${x}px) translateY(-${y}px)`;
       });
@@ -47,7 +47,7 @@ export default {
   z-index: 1;
 
   &__move {
-    //transition: transform .1s;
+    transition: transform .1s;
   }
 
   h1 {

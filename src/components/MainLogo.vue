@@ -47,5 +47,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  .logo {
+    position: fixed;
+    width: 100%;
+    padding: 24px;
+    z-index: 4;
+  }
 </style>

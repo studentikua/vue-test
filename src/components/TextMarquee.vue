@@ -2,11 +2,11 @@
   <div class="marquee">
     <div class="marquee__inner">
       <div class="marquee__inner-text">
-        <marquee-text class="mirror">
+        <marquee-text :repeat="10" class="mirror">
           {{ msg }}
         </marquee-text>
 
-        <marquee-text>
+        <marquee-text :repeat="10">
           {{ msg }}
         </marquee-text>
       </div>
