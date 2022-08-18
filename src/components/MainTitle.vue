@@ -1,18 +1,33 @@
 <template>
-  <div class="title">
-    <h1>{{ title }}</h1>
+  <div class="title" @mousemove="parallax">
+    <h1 class="title__move">{{ title }}</h1>
 
     <div class="title__bg">
-      <div class="showreal"></div>
+      <ShowReal/>
     </div>
   </div>
 </template>
 
 <script>
+import ShowReal from '@/components/ShowReal.vue'
 export default {
   name: 'MainTitle',
+  components: {
+    ShowReal
+  },
   props: {
     title: String
+  },
+  methods: {
+    parallax(e) {
+      document.querySelectorAll(".title__move").forEach((layer) => {
+        const speed = .5;
+        const x = (window.innerWidth - e.pageX * speed) / 90;
+        const y = (window.innerHeight - e.pageY * speed) / 90;
+
+        layer.style.transform = `translateX(-${x}px) translateY(-${y}px)`;
+      });
+    }
   },
 }
 </script>
@@ -30,6 +45,10 @@ export default {
   align-items: center;
   justify-content: center;
   z-index: 1;
+
+  &__move {
+    //transition: transform .1s;
+  }
 
   h1 {
     font-weight: 700;
@@ -61,39 +80,6 @@ export default {
       border-radius: 50%;
       filter: blur(76px);
     }
-  }
-}
-
-.showreal {
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  left: 100%;
-  margin-top: -130px;
-  margin-left: -130px;
-  background: radial-gradient(circle at center, #000 0%, #000 6%, rgba(0,0,0,0) 6%, rgba(0,0,0,0) 100%);
-  animation: spin 2.5s linear infinite;
-  animation-play-state: paused;
-
-  &:hover {
-    animation-play-state: running;
-  }
-
-  &::before {
-    content: url(@/assets/img/showreel-text.svg);
-    width: 118px;
-    height: 118px;
-    position: relative;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(-360deg);
   }
 }
 </style>

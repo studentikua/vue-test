@@ -1,14 +1,17 @@
 <template>
+  <MainLogo/>
   <NavMenu/>
   <router-view/>
 </template>
 
 <script>
 import NavMenu from '@/components/NavMenu.vue'
+import MainLogo from '@/components/MainLogo.vue'
 
 export default {
   components: {
     NavMenu,
+    MainLogo
 }
 }
 </script>
