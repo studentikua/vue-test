@@ -57,7 +57,7 @@ export default {
 
     &__inner {
       position: fixed;
-      width: 150vw;
+      width: 200vw;
       font-style: italic;
       font-weight: 700;
       font-size: 52px;
@@ -68,8 +68,28 @@ export default {
       left: 50%;
       transform: translateX(-50%);
 
+      @media (max-width: 1200px) {
+        font-size: 42px;
+      }
+
+      @media (max-width: 640px) {
+        font-size: 28px;
+      }
+
       &-text {
         transform: rotate(-30deg);
+
+        @media (max-width: 1200px) and (orientation: landscape) { 
+          transform: rotate(-36.61deg);
+        }
+
+        @media (max-width: 768px) and (orientation: portrait) { 
+          transform: rotate(-53.2deg);
+        }
+
+        @media (max-width: 640px) and (orientation: portrait) {
+          transform: rotate(-57deg);
+        }
 
         .mirror {
           transform: scale(-1, -1);

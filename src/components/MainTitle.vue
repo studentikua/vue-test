@@ -61,12 +61,36 @@ export default {
     margin: 0 auto;
     position: relative;
     z-index: 1;
+
+    @media (max-width: 1200px) {
+      font-size: 58px;
+      max-width: 724px;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 568px;
+    }
+
+    @media (max-width: 640px) {
+      font-size: 34px;
+      max-width: 333px;
+    }
   }
 
   &__bg {
     width: 578px;
     height: 578px;
     position: absolute;
+
+    @media (max-width: 1200px) {
+      width: 482px;
+      height: 482px;
+    }
+
+    @media (max-width: 640px) {
+      width: 294px;
+      height: 294px;
+    }
 
     &::before {
       content: '';
@@ -79,6 +103,10 @@ export default {
       background-color: #FFCB46;
       border-radius: 50%;
       filter: blur(76px);
+
+      @media (max-width: 640px) {
+        filter: blur(46.3568px);
+      }
     }
   }
 }

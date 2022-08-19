@@ -1,7 +1,8 @@
 <template>
   <LocalesInfo/>
   <MainLogo/>
-  <NavMenu/>
+  <BurgerMenu :onToggleMenu='onToggleMenu'/>
+  <NavMenu :menuStatus="menuStatus"/>
   <router-view v-slot="{ Component }">
     <transition name="fade" mode="out-in">
       <component :is="Component" />
@@ -12,14 +13,26 @@
 <script>
 import NavMenu from '@/components/NavMenu.vue'
 import MainLogo from '@/components/MainLogo.vue'
-import LocalesInfo from './components/LocalesInfo.vue';
+import LocalesInfo from '@/components/LocalesInfo.vue';
+import BurgerMenu from '@/components/BurgerMenu.vue';
 
 export default {
+  data () {
+    return {
+      menuStatus: ''
+    }
+  },
   components: {
     NavMenu,
     MainLogo,
-    LocalesInfo
-}
+    LocalesInfo,
+    BurgerMenu
+  },
+  methods: {
+    onToggleMenu (data) {
+      this.menuStatus = data.active
+    }
+  },
 }
 </script>
 

@@ -20,15 +20,32 @@ export default {
   animation: spin 2.5s linear infinite;
   animation-play-state: paused;
 
+  @media (max-width: 640px) {
+    margin-top: -70px;
+  }
+
   &:hover {
     animation-play-state: running;
   }
 
   &::before {
-    content: url(@/assets/img/showreel-text.svg);
+    content: '';
+    background: url(@/assets/img/showreel-text.svg) 50% 50% no-repeat;
+    background-size: contain;
     width: 118px;
     height: 118px;
     position: relative;
+    display: block;
+
+    @media (max-width: 1200px) {
+      width: 112px;
+      height: 112px;
+    }
+
+    @media (max-width: 640px) {
+      width: 77px;
+      height: 77px;
+    }
   }
 }
 

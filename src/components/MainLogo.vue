@@ -51,8 +51,17 @@ export default {
 <style lang="scss" scoped>
   .logo {
     position: fixed;
-    width: 100%;
-    padding: 24px;
-    z-index: 4;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 24px;
+    z-index: 6;
+
+    @media (max-width: 1200px) {
+      padding-top: 16px;
+
+      svg {
+        height: 38px;
+      }
+    }
   }
 </style>

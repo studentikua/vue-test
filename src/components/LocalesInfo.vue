@@ -48,6 +48,13 @@ export default {
     border: 1px solid rgba(255,255,255, .12);
     z-index: 5;
 
+    @media (max-width: 1200px) {
+      width: 34px;
+      height: 34px;
+      left: 16px;
+      top: 18px;
+    }
+
     &__drop {
       position: absolute;
       left: 100%;
