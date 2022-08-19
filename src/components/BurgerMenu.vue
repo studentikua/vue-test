@@ -43,7 +43,6 @@ export default {
 
 <style lang="scss" scoped>
   .burger {
-    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     width: 22px;
@@ -59,6 +58,11 @@ export default {
     right: 16px;
     top: 28px;
     z-index: 6;
+    display: none;
+
+    @media (max-width: 640px) {
+      display: flex;
+    }
       
     &.active {
       span {

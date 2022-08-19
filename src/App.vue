@@ -63,11 +63,27 @@ html, body {
   background-color: #BEBEBE;
 }
 
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.85s ease;
+}
+.slide-enter-from {
+  left: -100%;
+}
+.slide-enter-to {
+  left: 0%;
+}
+.slide-leave-from {
+  transform: scale(1);
+}
+.slide-leave-to {
+  transform: scale(0.8);
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;
 }
-
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;

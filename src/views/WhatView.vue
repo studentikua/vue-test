@@ -1,13 +1,13 @@
 <template>
-  <div class="who">
-    <MainTitle title="who page"/>
+  <div class="what">
+    <MainTitle title="what page"/>
   </div>
 </template>
 
 <script>
 import MainTitle from '@/components/MainTitle.vue'
 export default {
-  name: 'WhoView',
+  name: 'WhatView',
   components: {
     MainTitle
   }
