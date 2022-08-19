@@ -49,7 +49,15 @@ export default {
       width: 20px;
       height: 20px;
 
-      &:hover {
+      &.router-link-exact-active {
+        cursor: default;
+        
+        span {
+          color: #ffcb46;
+        }
+      }
+
+      &:not(.router-link-exact-active):hover {
         span {
           color: #fff;
 
